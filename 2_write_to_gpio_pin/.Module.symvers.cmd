@@ -1,0 +1,1 @@
+savedcmd_/home/dinesh/workspace/lld/write_to_gpio_pin/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/dinesh/workspace/lld/write_to_gpio_pin/Module.symvers -n -T /home/dinesh/workspace/lld/write_to_gpio_pin/modules.order -i Module.symvers -e 

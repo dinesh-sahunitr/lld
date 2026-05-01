@@ -1,0 +1,1 @@
+savedcmd_/home/dinesh/workspace/lld/write_to_gpio_pin/modules.order := {   echo /home/dinesh/workspace/lld/write_to_gpio_pin/gpio_21_set_reset.o; :; } > /home/dinesh/workspace/lld/write_to_gpio_pin/modules.order

@@ -1,0 +1,1 @@
+savedcmd_/home/dinesh/workspace/lld/write_to_gpio_pin/gpio_21_set_reset.mod := printf '%s\n'   gpio_21_set_reset.o | awk '!x[$$0]++ { print("/home/dinesh/workspace/lld/write_to_gpio_pin/"$$0) }' > /home/dinesh/workspace/lld/write_to_gpio_pin/gpio_21_set_reset.mod
