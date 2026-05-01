@@ -1,1 +1,0 @@
-savedcmd_/home/dinesh/workspace/lld/5_dma_buf_manager_kernel_allocate/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/dinesh/workspace/lld/5_dma_buf_manager_kernel_allocate/Module.symvers -n -T /home/dinesh/workspace/lld/5_dma_buf_manager_kernel_allocate/modules.order -i Module.symvers -e 
