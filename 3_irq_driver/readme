@@ -1,0 +1,31 @@
+How to Increment the Counter (The Hardware Action)
+To see those 0s change to 1s, you need to create a Falling Edge—an electrical transition from 3.3V (High) to 0V (Low).
+
+1. The Physical Wiring
+Since we configured the pin with IRQF_TRIGGER_FALLING:
+
+Identify Physical Pin 11 (which is BCM 17).
+
+Identify any Ground Pin (like Physical Pin 9, 14, or 25).
+
+The Action: Take a jumper wire, plug one end into Pin 11, and tap the other end against a Ground pin.
+
+2. Why it increments
+When the wire touches Ground:
+
+The voltage on BCM 17 drops to 0V.
+
+the pinctrl-bcm2835 hardware detects this "Falling Edge."
+
+The hardware sends a signal to the CPU's Interrupt Controller (GIC).
+
+The Kernel pauses the current task and jumps to your gpio_irq_handler function.
+
+The Kernel increments the counter in /proc/interrupts for the CPU core that handled the event.
+
+Verification Steps
+Monitor in real-time:
+Run this in a terminal to watch the count jump as you touch the wire:
+
+Bash
+watch -n 0.1 "cat /proc/interrupts | grep pi_irq_handler"
